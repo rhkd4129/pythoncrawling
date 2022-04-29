@@ -1,12 +1,16 @@
+
 from c import w_baseball,w_football
+import numpy as np
+import pandas as pd
 
 
 base  = w_baseball('https://sports.news.naver.com/wbaseball/index')
 foot  = w_football('https://sports.news.naver.com/wfootball/index')
+base_news = pd.Series(base.keys())
+base_link = pd.Series(base.values())
+a = pd.DataFrame({
+    '기사':base_news,
+    '링크':base_link                
+})
+print(a)
 
-for key in base.keys():
-    print(key+":"+base[key])
-
-print("--"*10)
-for key in foot.keys():
-    print(key+":"+foot[key])
