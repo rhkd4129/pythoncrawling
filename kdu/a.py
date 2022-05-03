@@ -1,9 +1,8 @@
-from sqlite3 import Row
 from bs4 import BeautifulSoup
 import urllib.request
 import pandas as pd
 from urllib.parse import quote
-import pandas
+
 def janhak():
     janhak_list={}
     a,b,c=[],[],[]
